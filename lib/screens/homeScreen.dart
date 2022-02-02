@@ -21,7 +21,14 @@ class _HomeScreenState extends State<HomeScreen> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
-            BuildAppBar(iconUrl: 'assets/icons/bell.png'),
+            BuildAppBar(
+              iconUrl: 'assets/icons/bell.png',
+              func: () {
+                setState(() {
+                  ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text("Notification pressed"),backgroundColor: Colors.blue[900]));
+                });
+              },
+            ),
             SizedBox(height: 10),
             _buildText('Choose a Car'),
             BuildTextSwitch(),
