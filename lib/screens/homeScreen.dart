@@ -25,7 +25,7 @@ class _HomeScreenState extends State<HomeScreen> {
               iconUrl: 'assets/icons/bell.png',
               func: () {
                 setState(() {
-                  ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text("Notification pressed"),backgroundColor: Colors.blue[900]));
+                  ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text("Notification pressed"),backgroundColor: Colors.blue[200]));
                 });
               },
             ),
